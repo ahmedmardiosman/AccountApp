@@ -33,9 +33,13 @@ public class App {
 		// System.out.println(s.getAccounts());
 
 		// Allows us to convert Hash map to JSON file
-		JSONObject json = new JSONObject(Service.accounts);
-
+		JSONObject json = new JSONObject(Service.accounts.get(102));
+		
 		System.out.println(json);
+		
+		JSONObject json2 = new JSONObject(Service.accounts);
+
+		System.out.println(json2);
 
 	}
 
