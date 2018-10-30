@@ -1,9 +1,12 @@
 package cin.qa.app;
 
-public class app {
+public class App {
+
+	private App () {
+		
+	}
 	
-	
-	public static void main(String [] Args) {
+	public static void main(String [] args) {
 		
 		
 		Service s = new Service();
