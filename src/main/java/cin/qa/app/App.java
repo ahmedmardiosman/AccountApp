@@ -1,5 +1,7 @@
 package cin.qa.app;
 
+import org.json.JSONObject;
+
 public class App {
 
 	private App () {
@@ -21,7 +23,7 @@ public class App {
 		
 	//	s.deleteAccount(102);
 		
-		System.out.println(s.getAccounts());
+	//	System.out.println(s.getAccounts());
 		
 Accounts a3 = new Accounts (103, "Adonay" , "G" , "12345678");
 		
@@ -30,8 +32,17 @@ Accounts a3 = new Accounts (103, "Adonay" , "G" , "12345678");
 		s.addAccount(a3);
 		s.addAccount(a4);
 		
-		System.out.println(s.getAccounts());
+	//	System.out.println(s.getAccounts());
+		
+		JSONObject json = new JSONObject(Service.accounts);
+		
+		
+		System.out.println(json);
 		
 	}
+
+			
+
+	
 
 }
