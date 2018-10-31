@@ -25,7 +25,7 @@ public class App {
 
 		Accounts a3 = new Accounts(103, "Adonay", "G", "45342578");
 
-		Accounts a4 = new Accounts(104, "Adil", "O", "87676521");
+		Accounts a4 = new Accounts(104, "Ahmed", "O", "87676521");
 
 		s.addAccount(a3);
 		s.addAccount(a4);
