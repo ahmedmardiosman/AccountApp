@@ -22,6 +22,12 @@ public class Service {
 
 	}
 
+	public static int duplicatedAccounts2(String name) {
+
+		return (int) accounts.entrySet().stream().filter(w -> w.getValue().getFirstName().equals(name)).count();
+
+	}
+
 	public static void addAccount(Accounts acc) {
 		accounts.put(acc.getId(), acc);
 

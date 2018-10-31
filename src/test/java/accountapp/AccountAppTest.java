@@ -32,7 +32,7 @@ public class AccountAppTest {
 	@Test
 	public void test() {
 
-		int actual = Service.duplicatedAccounts("Ahmed");
+		int actual = Service.duplicatedAccounts2("Ahmed");
 
 		Assert.assertEquals(2, actual);
 
