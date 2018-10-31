@@ -3,6 +3,8 @@ package cin.qa.app;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.qa.persistence.domain.Accounts;
+
 public class Service {
 
 	static HashMap<Integer, Accounts> accounts = new HashMap<>();

@@ -2,6 +2,8 @@ package cin.qa.app;
 
 import org.json.JSONObject;
 
+import com.qa.persistence.domain.Accounts;
+
 public class App {
 
 	private App() {

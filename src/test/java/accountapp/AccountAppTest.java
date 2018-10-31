@@ -4,7 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import cin.qa.app.Accounts;
+import com.qa.persistence.domain.Accounts;
+
 import cin.qa.app.Service;
 
 public class AccountAppTest {
@@ -31,6 +32,15 @@ public class AccountAppTest {
 
 	@Test
 	public void test() {
+
+		int actual = Service.duplicatedAccounts("Ahmed");
+
+		Assert.assertEquals(2, actual);
+
+	}
+	
+	@Test
+	public void test2() {
 
 		int actual = Service.duplicatedAccounts2("Ahmed");
 
