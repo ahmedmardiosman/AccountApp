@@ -13,7 +13,6 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import com.qa.persistence.domain.Accounts;
-import com.qa.persistence.domain.Movie;
 import com.qa.util.JSONUtil;
 
 // Class to add stuff to database
@@ -38,7 +37,7 @@ public class AccountDBRepository implements AccountRepository {
 
 	@Override
 	@Transactional(REQUIRED)
-	public String addAccount(String movie) {
+	public String addAccount(String account) {
 		Accounts aAccount = util.getObjectForJSON(account, Accounts.class);
 		manager.persist(aAccount);
 		return "{\"message\": \"Account has been sucessfully added\"}";
@@ -47,15 +46,15 @@ public class AccountDBRepository implements AccountRepository {
 	@Override
 	@Transactional(REQUIRED)
 	public String deleteAccount(Long id) {
-		Accounts movieInDB = findAccount(id);
-		if (movieInDB != null) {
-			manager.remove(movieInDB);
+		Accounts AccountInDB = findAccount(id);
+		if (AccountInDB != null) {
+			manager.remove(AccountInDB);
 		}
 		return "{\"message\": \"movie sucessfully deleted\"}";
 	}
 
-	private Movie findMovie(Long id) {
-		return manager.find(Movie.class, id);
+	private Accounts findAccount(Long id) {
+		return manager.find(Accounts.class, id);
 	}
 
 	public void setManager(EntityManager manager) {
@@ -66,9 +65,9 @@ public class AccountDBRepository implements AccountRepository {
 		this.util = util;
 	}
 
-	public String getMovie(Long id) {
-		Movie movieInDB = findMovie(id);
-		return util.getJSONForObject(movieInDB);
+	public String getAccount(Long id) {
+		Accounts AccountInDB = findAccount(id);
+		return util.getJSONForObject(AccountInDB);
 
 	}
 

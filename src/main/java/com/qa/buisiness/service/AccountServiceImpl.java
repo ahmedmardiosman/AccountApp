@@ -2,7 +2,7 @@ package com.qa.buisiness.service;
 
 import javax.inject.Inject;
 
-import com.qa.persistence.repository.MovieRepository;
+import com.qa.persistence.repository.AccountRepository;
 
 public class AccountServiceImpl implements AccountService{
 	
@@ -10,23 +10,23 @@ public class AccountServiceImpl implements AccountService{
 	private AccountRepository repo;
 
 	public String addAccount(String movie) {
-		return repo.addMovie(movie);
+		return repo.addAccount(movie);
 	}
 
 	@Override
 	public String deleteAccount(Long id) {
-		return repo.deleteMovie(id);
+		return repo.deleteAccount(id);
 	}
 	
 	public String getAccount(Long id) {
-		return repo.getMovie(id);
+		return repo.getAccount(id);
 		
 	}
 	
 	
 	
 	public String getAllAccounts() {
-		return repo.getAllMovies();
+		return repo.getAllAccounts();
 	}
 	
 	public void setRepo(AccountRepository repo) {
