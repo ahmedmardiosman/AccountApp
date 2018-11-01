@@ -45,6 +45,23 @@ public class AccountDBRepository implements AccountRepository {
 
 	@Override
 	@Transactional(REQUIRED)
+	public String updateAccount(Long id, String account) {
+		Accounts aAccount = util.getObjectForJSON(account, Accounts.class);
+		Accounts accountInDB = findAccount(id);
+		accountInDB.setFirstName(aAccount.getFirstName());
+		accountInDB.setLastName(aAccount.getLastName());
+		accountInDB.setAccountNumber(aAccount.getAccountNumber());
+		
+		
+		return "{\"message\": \"Account has been sucessfully updated\"}";
+	}
+	
+	
+	
+
+	
+	@Override
+	@Transactional(REQUIRED)
 	public String deleteAccount(Long id) {
 		Accounts AccountInDB = findAccount(id);
 		if (AccountInDB != null) {

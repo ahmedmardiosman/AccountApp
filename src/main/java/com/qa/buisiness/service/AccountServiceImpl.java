@@ -12,6 +12,11 @@ public class AccountServiceImpl implements AccountService {
 	public String addAccount(String account) {
 		return repo.addAccount(account);
 	}
+	
+	
+	public String updateAccount(Long id, String account) {
+		return repo.updateAccount(id, account);
+	}
 
 	@Override
 	public String deleteAccount(Long id) {
