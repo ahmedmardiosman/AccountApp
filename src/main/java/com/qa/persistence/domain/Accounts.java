@@ -7,15 +7,18 @@ import javax.persistence.Id;
 
 @Entity
 public class Accounts {
-	
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private int id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String accountNumber;
 
-	public Accounts(int id, String firstName, String lastName, String accountNumber) {
+	public Accounts() {
+	}
+
+	public Accounts(Long id, String firstName, String lastName, String accountNumber) {
 
 		this.setId(id);
 		this.setFirstName(firstName);
@@ -48,11 +51,11 @@ public class Accounts {
 		this.accountNumber = accountNumber;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
