@@ -4,13 +4,14 @@ import javax.inject.Inject;
 
 import com.qa.persistence.repository.AccountRepository;
 
+
 public class AccountServiceImpl implements AccountService{
 	
 	@Inject
 	private AccountRepository repo;
 
-	public String addAccount(String movie) {
-		return repo.addAccount(movie);
+	public String addAccount(String account) {
+		return repo.addAccount(account);
 	}
 
 	@Override

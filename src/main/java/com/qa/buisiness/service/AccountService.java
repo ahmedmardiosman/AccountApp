@@ -4,7 +4,7 @@ public interface AccountService {
 	
 	String getAllAccounts();
 
-	String addAccount(String movie);
+	String addAccount(String account);
 
 	String deleteAccount(Long id);
 	

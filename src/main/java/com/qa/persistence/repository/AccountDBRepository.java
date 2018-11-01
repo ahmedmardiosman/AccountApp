@@ -50,7 +50,7 @@ public class AccountDBRepository implements AccountRepository {
 		if (AccountInDB != null) {
 			manager.remove(AccountInDB);
 		}
-		return "{\"message\": \"movie sucessfully deleted\"}";
+		return "{\"message\": \"Account sucessfully deleted\"}";
 	}
 
 	private Accounts findAccount(Long id) {

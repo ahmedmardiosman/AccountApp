@@ -1,6 +1,5 @@
 package com.qa.rest;
 
-
 import javax.inject.Inject;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -17,10 +16,10 @@ public class AccountEndpoint {
 	@Inject
 	private AccountService service;
 
-	@Path("/getAllMovies")
+	@Path("/getAllAccounts")
 	@GET
 	@Produces({ "application/json" })
-	public String getAllMovies() {
+	public String getAllAccounts() {
 		return service.getAllAccounts();
 	}
 
@@ -34,14 +33,14 @@ public class AccountEndpoint {
 	@Path("/deleteAccount/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteMovie(@PathParam("id") Long id) {
+	public String deleteAccount(@PathParam("id") Long id) {
 		return service.deleteAccount(id);
 	}
 	
 	@Path("/getAccount/{id}")
 	@GET
 	@Produces({ "application/json" })
-	public String getMovie(@PathParam("id") Long id) {
+	public String getAccount(@PathParam("id") Long id) {
 		return service.getAccount(id);
 	}
 	
