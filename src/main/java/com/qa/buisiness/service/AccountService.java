@@ -10,5 +10,7 @@ public interface AccountService {
 	
 	String getAccount(Long id);
 
+	String updateAccount(Long id, String account);
+
 
 }

@@ -1,7 +1,5 @@
 package com.qa.app;
 
-import javax.inject.Inject;
-
 import org.json.JSONObject;
 
 import com.qa.persistence.domain.Accounts;

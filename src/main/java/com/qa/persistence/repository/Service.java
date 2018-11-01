@@ -2,10 +2,14 @@ package com.qa.persistence.repository;
 
 import java.util.HashMap;
 import javax.enterprise.inject.Alternative;
+import javax.faces.bean.ApplicationScoped;
 import javax.inject.Inject;
 
 import com.qa.persistence.domain.Accounts;
 import com.qa.util.JSONUtil;
+
+
+
 
 @Alternative
 public class Service implements AccountRepository {
@@ -52,6 +56,10 @@ public class Service implements AccountRepository {
 		return "{\"message\": \"Account has been sucessfully added\"}";
 	}
 
+	
+	
+	
+	
 	@Override
 	public String deleteAccount(Long id) {
 		accounts.remove(id);
@@ -69,6 +77,14 @@ public class Service implements AccountRepository {
 
 	public static void setAccounts(HashMap<Long, Accounts> accounts) {
 		Service.accounts = accounts;
+	}
+
+	
+
+	@Override
+	public String updateAccount(Long id, String account) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
