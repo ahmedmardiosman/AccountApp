@@ -1,32 +1,42 @@
 //package accountapp;
 //
+//import javax.inject.Inject;
+//
 //import org.junit.Assert;
 //import org.junit.Before;
 //import org.junit.Test;
 //
 //import com.qa.persistence.domain.Accounts;
-//
-//import cin.qa.app.Service;
+//import com.qa.persistence.repository.Service;
+//import com.qa.util.JSONUtil;
 //
 //public class AccountAppTest {
 //
 //	@Before
 //	public void beforeFunction() {
+//		
+//		JSONUtil util =  new JSONUtil();
 //
-//		Accounts a1 = new Accounts(101, "Ahmed", "Osman", "12345678");
+//		Accounts a1 = new Accounts((long) 1, "Ahmed", "Osman", "12345678");
 //
-//		Accounts a2 = new Accounts(102, "Harrison", "Groome", "87654321");
+//		Accounts a2 = new Accounts((long) 2, "Harrison", "Groome", "87654321");
 //
-//		Accounts a3 = new Accounts(103, "Adonay", "G", "45342578");
+//		Accounts a3 = new Accounts((long) 3, "Adonay", "G", "45342578");
 //
-//		Accounts a4 = new Accounts(104, "Ahmed", "O", "87676521");
+//		Accounts a4 = new Accounts((long) 4, "Ahmed", "O", "87676521");
 //
 //		Service s = new Service();
+//		
+//		s.addAccount(util.getJSONForObject(a1));
+//		s.addAccount(util.getJSONForObject(a2));
 //
-//		s.addAccount(a1);
-//		s.addAccount(a2);
-//		s.addAccount(a3);
-//		s.addAccount(a4);
+//		// s.deleteAccount(102);
+//
+//		// System.out.println(s.getAccounts());
+//
+//		s.addAccount(util.getJSONForObject(a3));
+//		s.addAccount(util.getJSONForObject(a4));
+//
 //
 //	}
 //
@@ -35,7 +45,7 @@
 //
 //		int actual = Service.duplicatedAccounts("Ahmed");
 //
-//		Assert.assertEquals(2, actual);
+//		//Assert.assertEquals(2, actual);
 //
 //	}
 //	
@@ -44,7 +54,7 @@
 //
 //		int actual = Service.duplicatedAccounts2("Ahmed");
 //
-//		Assert.assertEquals(2, actual);
+//		//Assert.assertEquals(2, actual);
 //
 //	}
 //
